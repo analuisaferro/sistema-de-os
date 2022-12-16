@@ -83,7 +83,7 @@ def atribuir_equipe(request, id):
     try:
         instancia=OS_ext.objects.get(os=id)
         form=Equipe_Form(instance=instancia)        
-    except Exception as e:
+    except:
         form=Equipe_Form(initial={'os': id})
         instancia=None
         
